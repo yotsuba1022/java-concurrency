@@ -8,25 +8,25 @@ import java.util.concurrent.*;
 public class FutureDemo1 {
 
     private static final int MAX_TIME_LIMIT = 1;
-    private static final ExecutorService LaundryService = Executors.newFixedThreadPool(1);
+    private static final ExecutorService laundryService = Executors.newFixedThreadPool(1);
 
     public static void main(String args[]) throws InterruptedException, ExecutionException {
         int timer = 0;
         LaundryMachine laundryMachine = new LaundryMachine(10);
 
-        System.out.println("Submitting Task ...");
+        System.out.println("Submitting laundry task...");
 
-        Future future = LaundryService.submit(laundryMachine);
+        Future future = laundryService.submit(laundryMachine);
 
         System.out.println("Task is submitted");
 
         while (!future.isDone() && timer < MAX_TIME_LIMIT) {
-            System.out.println("Task is not completed yet....");
+            System.out.println("Still washing....");
             Thread.sleep(1);
             timer++;
         }
 
-        System.out.println("I can't wait, let's check result");
+        System.out.println("I can't wait, let's check the result.");
         Integer result = null;
         try {
             result = (Integer) future.get(1, TimeUnit.SECONDS);
@@ -40,7 +40,7 @@ public class FutureDemo1 {
             System.out.println("Done with " + result + " cloths.");
         }
 
-        LaundryService.shutdown();
+        laundryService.shutdown();
     }
 
 }
