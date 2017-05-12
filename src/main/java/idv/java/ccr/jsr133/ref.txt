@@ -1,0 +1,5 @@
+JSR 133 (Java Memory Model) FAQ
+https://www.cs.umd.edu/~pugh/java/memoryModel/jsr-133-faq.html
+
+InfoQ - Learn JMM
+http://www.infoq.com/cn/articles/java-memory-model-1
