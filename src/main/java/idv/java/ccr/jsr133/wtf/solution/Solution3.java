@@ -15,8 +15,7 @@ public class Solution3 {
             @Override
             public void run() {
                 while (!flag) {
-                    synchronized (this) {
-                    }
+                    foo();
                 }
                 System.out.println("Thread done.");
             }
