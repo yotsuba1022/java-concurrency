@@ -10,7 +10,7 @@ public class Solution3 {
     public static void main(String[] args) throws InterruptedException {
         new Thread(new Runnable() {
 
-            public synchronized void foo() {}
+            synchronized void foo() {}
 
             @Override
             public void run() {
