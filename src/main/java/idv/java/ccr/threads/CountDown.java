@@ -7,6 +7,8 @@ import idv.java.ccr.util.ThreadColor;
  */
 class CountDown {
 
+    private int instanceLoopCounter;
+
     public void doCountDown() {
         String color;
 
@@ -27,7 +29,6 @@ class CountDown {
     }
 
     public void doCountDownWithInstanceLevelLoopCounter() {
-        int i;
         String color;
 
         switch (Thread.currentThread().getName()) {
@@ -41,8 +42,8 @@ class CountDown {
                 color = ThreadColor.ANSI_GREEN;
         }
 
-        for (i = 10; i > 0; i--) {
-            System.out.println(color + Thread.currentThread().getName() + ": i = " + i);
+        for (instanceLoopCounter = 10; instanceLoopCounter > 0; instanceLoopCounter--) {
+            System.out.println(color + Thread.currentThread().getName() + ": i = " + instanceLoopCounter);
         }
     }
 
