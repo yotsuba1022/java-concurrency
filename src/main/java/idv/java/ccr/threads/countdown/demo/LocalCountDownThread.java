@@ -1,4 +1,4 @@
-package idv.java.ccr.threads;
+package idv.java.ccr.threads.countdown.demo;
 
 /**
  * @author Carl Lu
