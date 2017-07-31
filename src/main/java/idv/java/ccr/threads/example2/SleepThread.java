@@ -15,6 +15,7 @@ public class SleepThread implements Runnable {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             System.out.println(ThreadColor.ANSI_BRIGHT_CYAN + "Another thread wake me up.");
+            return;
         }
 
         System.out.println(ThreadColor.ANSI_BRIGHT_CYAN + "Three seconds have passed and I'm awake.");
