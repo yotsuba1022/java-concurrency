@@ -17,7 +17,7 @@ class CountDown {
                 color = ThreadColor.ANSI_CYAN;
                 break;
             case "Thread 2":
-                color = ThreadColor.ANSI_PURPLE;
+                color = ThreadColor.ANSI_MAGENTA;
                 break;
             default:
                 color = ThreadColor.ANSI_GREEN;

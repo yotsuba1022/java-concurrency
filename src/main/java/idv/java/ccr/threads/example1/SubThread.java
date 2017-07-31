@@ -8,7 +8,7 @@ import idv.java.ccr.util.ThreadColor;
 public class SubThread implements Runnable {
 
     public void run() {
-        System.out.println(ThreadColor.ANSI_PURPLE + "Echo from sub thread.");
+        System.out.println(ThreadColor.ANSI_MAGENTA + "Echo from sub thread.");
     }
 
 }
