@@ -1,4 +1,4 @@
-package idv.java.ccr.threads.countdown.demo;
+package idv.java.ccr.threads.example3;
 
 import idv.java.ccr.util.ThreadColor;
 

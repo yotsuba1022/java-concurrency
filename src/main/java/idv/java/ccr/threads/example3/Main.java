@@ -1,9 +1,9 @@
-package idv.java.ccr.threads.countdown.demo;
+package idv.java.ccr.threads.example3;
 
 /**
  * @author Carl Lu
  */
-public class ThreadsDemo1 {
+public class Main {
 
     /*
     * We can't guarantee the execution order of multi-thread.
