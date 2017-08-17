@@ -1,4 +1,4 @@
-Live lock:
+# Live lock:
 
 Anytime threads have to wait for other threads to complete something they don't block while they wait,
 there's a potential for live lock. The next potential problem that can arise in a multi-thread application
