@@ -31,7 +31,7 @@ the way Java manages memory, it’s possible to get memory consistency errors wh
 and write the same variable.
 
 Java’s memory management model is outside the scope here. All we need to know is that each thread has a
-CPU cache, which can contain copies of values that are in main memory.
+CPU cache, which can contain copies of values that are in main memory. 
 
 Since it’s faster to read from the cache, this can improve the performance of an application.
 There would not be a problem if there was only one CPU, but these days, most computers have more than one CPU.
