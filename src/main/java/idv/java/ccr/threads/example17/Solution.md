@@ -28,3 +28,7 @@ If so, can we force all threads to obtain the locks in the same order?
 
 In this example, I use the ReentrantLock as the solution, for each thread, it will try to
 obtain the lock then finish the task, if it couldn't obtain the lock, keep acquiring it until the task is done.
+
+The result might looks like the following screenshot:
+
+<img src="./solution.png" width="320" height="195"/><br/>
