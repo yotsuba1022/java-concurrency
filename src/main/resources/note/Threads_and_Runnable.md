@@ -36,3 +36,8 @@ background non-daemon threads terminate. If the background threads are daemon th
 will terminate as soon as the default main thread terminates.
 * The Thread class provides an interruption mechanism in which one thread can interrupt
 another thread. When a thread is interrupted, it throws java.lang.InterruptedException.
+* A thread (such as the default main thread) will occasionally start another thread to
+  perform a lengthy calculation, download a large file, or perform some other time-consuming
+  activity. After finishing its other tasks, the thread that started the worker
+  thread is ready to process the results of the worker thread and waits for the worker thread
+  to finish and die.
