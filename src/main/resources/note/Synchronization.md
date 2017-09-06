@@ -53,3 +53,25 @@ relative timing or interleaving of multiple threads by the scheduler.
       occurs when an application reaches a state in which it can make no further progress. In a
       single-threaded application, an infinite loop would be an example. Multithreaded
       applications face the additional liveness challenges of deadlock, livelock, and starvation.
+    * Deadlock: Thread 1 waits for a resource that thread 2 is holding exclusively and thread 2
+      is waiting for a resource that thread 1 is holding exclusively. Neither thread can make progress.
+    * Livelock: Thread x keeps retrying an operation that will always fail. It cannot make progress for this reason.
+    * Starvation: Thread x is continually denied (by the scheduler) access to a needed resource
+      in order to make progress. Perhaps the scheduler executes higher-priority threads before
+      lower-priority threads and there is always a higher-priority thread available for execution.
+      Starvation is also commonly referred to as indefinite postponement.
+    * Sometimes it's not so easy to detect the deadlock, think about the following circular relationship:
+        * Class A's synchronized method calls class B's synchronized method.
+        * Class B's synchronized method calls class C's synchronized method.
+        * Class C's synchronized method calls class A's synchronized method.
+
+* Volatile and final variables
+    * In previous section, we know that synchronization exhibits two properties: mutual exclusion and visibility.
+      The synchronized keyword is associated with both properties. Java also provides a weaker form of synchronization
+      involving visibility only, and associates only this property with the volatile keyword.
+    * Use volatile only where visibility is an issue. Also, you can only use this
+      reserved word in the context of field declarations (you’ll receive an error if you try to make a
+      local variable volatile). Finally, you can declare double and long fields volatile, but
+      should avoid doing so on 32-bit JVMs because it takes two operations to access a double or
+      long variable’s value, and mutual exclusion (via synchronized) is required to access their
+      values safely.
