@@ -75,3 +75,12 @@ relative timing or interleaving of multiple threads by the scheduler.
       should avoid doing so on 32-bit JVMs because it takes two operations to access a double or
       long variable’s value, and mutual exclusion (via synchronized) is required to access their
       values safely.
+    * Java provides a special thread-safety guarantee concerning immutable objects. These
+      objects can be safely accessed from multiple threads, even when synchronization isn’t
+      used to publish (expose) their references provided that the following rules are observed:
+      * Immutable objects must not allow state to be modified.
+      * All fields must be declared final.
+      * Objects must be properly constructed so that "this" references don't escape from constructors.
+        * References:
+            * [Ref 1](https://www.ibm.com/developerworks/library/j-jtp0618/)
+            * [Ref 2](https://stackoverflow.com/questions/1588420/how-does-this-escape-the-constructor-in-java)
