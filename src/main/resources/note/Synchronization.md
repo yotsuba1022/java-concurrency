@@ -1,7 +1,7 @@
 # Synchronization
 
 * A race condition occurs when the correctness of a computation depends on the
-relative timing or interleaving of multiple threads by the scheduler.
+  relative timing or interleaving of multiple threads by the scheduler.
 * There are some types of race conditions:
     * Check-then-act: A potentially stale observation is used to decide on what to do next.
     For example, when matching the condition within if statement, do something.
