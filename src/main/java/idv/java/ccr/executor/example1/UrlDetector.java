@@ -1,4 +1,4 @@
-package idv.java.ccr.executor;
+package idv.java.ccr.executor.example1;
 
 import java.net.HttpURLConnection;
 import java.net.URL;

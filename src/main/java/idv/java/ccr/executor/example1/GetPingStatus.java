@@ -1,19 +1,13 @@
-package idv.java.ccr.executor;
+package idv.java.ccr.executor.example1;
 
 import java.util.Arrays;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 /**
  * @author Carl Lu
  */
-public class GetPingStatusWithExecutorService {
+public class GetPingStatus {
 
-    private final static int MAX_THREADS_NUMBER = 30;
-
-    public static void main(String args[]) {
-        ExecutorService executorService = Executors.newFixedThreadPool(MAX_THREADS_NUMBER);
-
+    public static void main(String args[]) throws Exception {
         String[] hostList = {"http://crunchify.com", "http://yahoo.com", "http://www.ebay.com", "http://google.com",
                 "http://www.example.co", "https://paypal.com", "http://bing.com/", "http://techcrunch.com/",
                 "http://mashable.com/", "http://thenextweb.com/", "http://wordpress.com/", "http://wordpress.org/",
@@ -26,17 +20,10 @@ public class GetPingStatusWithExecutorService {
 
         long start = System.currentTimeMillis();
         Arrays.stream(hostList).forEach(url -> {
-            executorService.execute(new UrlDetector(url));
+            new UrlDetector(url).run();
         });
-
-        executorService.shutdown();
-
-        while (!executorService.isTerminated()) {
-        }
-
         long end = System.currentTimeMillis();
         System.out.println("Total cost time: " + (end - start) + " msecs.");
-
-        System.out.println("All tasks have been finished");
     }
+
 }
