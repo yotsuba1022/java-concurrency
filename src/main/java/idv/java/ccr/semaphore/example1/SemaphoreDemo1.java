@@ -1,4 +1,4 @@
-package idv.java.ccr.semaphore;
+package idv.java.ccr.semaphore.example1;
 
 import java.util.concurrent.Semaphore;
 
