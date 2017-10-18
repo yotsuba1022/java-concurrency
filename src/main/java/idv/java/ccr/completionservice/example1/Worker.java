@@ -15,11 +15,13 @@ public class Worker implements Callable<String> {
 
     @Override
     public String call() throws Exception {
+        String threadName = Thread.currentThread().getName();
         try {
             Thread.sleep((long) ( Math.random() * 300 ));
+            System.out.println(threadColor + threadName + "executing...");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return threadColor + Thread.currentThread().getName() + " done.";
+        return threadColor + threadName + " done.";
     }
 }
