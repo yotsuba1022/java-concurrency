@@ -7,7 +7,7 @@ public class Locked {
 
     private static boolean flag = false;
 
-    public static void main(String args[]) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException {
         new Thread(() -> {
             while (!flag) {
 
