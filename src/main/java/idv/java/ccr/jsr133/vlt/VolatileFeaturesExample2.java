@@ -6,7 +6,7 @@ package idv.java.ccr.jsr133.vlt;
 public class VolatileFeaturesExample2 {
 
     // 64-bit的long型別變數
-    volatile long vl = 0L;
+    long vl = 0L;
 
     // 對單個普通變數的讀取用同一個monitor lock來同步
     public synchronized long getVl() {
