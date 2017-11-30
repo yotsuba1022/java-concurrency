@@ -32,7 +32,7 @@ public class CasDemo {
 
         /*
         * If we didn't invoke shutdown() here,
-        * it might cause the output result incorrect since that there might still some tasks are not finished yet.
+        * it might cause the incorrect output results since that there might still some tasks are not finished yet.
         * */
         executorService.shutdown();
 
