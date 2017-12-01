@@ -15,7 +15,6 @@ public class CasDemo {
     private final static int EXPECTED_TOTAL_COUNT = MAX_COUNT * MAX_THREAD_NUM;
 
     public static void main(String[] args) {
-
         final Counter counter = new Counter();
         ThreadPoolExecutor executorService = (ThreadPoolExecutor) Executors.newFixedThreadPool(MAX_THREAD_NUM);
         long startTime = System.currentTimeMillis();
@@ -32,7 +31,7 @@ public class CasDemo {
 
         /*
         * If we didn't invoke shutdown() here,
-        * it might cause the incorrect output results since that there might still some tasks are not finished yet.
+        * it might cause the incorrect output results since that there might still have some tasks are not finished yet.
         * */
         executorService.shutdown();
 
