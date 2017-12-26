@@ -1,4 +1,4 @@
-package idv.java.jvm.oom;
+package idv.java.jvm.error.jvmstack;
 
 /**
  * @author Carl Lu

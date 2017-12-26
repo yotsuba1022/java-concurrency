@@ -1,4 +1,4 @@
-package idv.java.jvm.oom;
+package idv.java.jvm.error.heap;
 
 import java.util.ArrayList;
 import java.util.List;
