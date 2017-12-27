@@ -1,0 +1,15 @@
+Java HotSpot(TM) 64-Bit Server VM (25.152-b16) for bsd-amd64 JRE (1.8.0_152-b16), built on Sep 14 2017 02:31:13 by "java_re" with gcc 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)
+Memory: 4k page, physical 8388608k(189488k free)
+
+/proc/meminfo:
+
+CommandLine flags: -XX:InitialHeapSize=20971520 -XX:MaxHeapSize=20971520 -XX:MaxNewSize=10485760 -XX:NewSize=10485760 -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:SurvivorRatio=8 -XX:-UseCompressedClassPointers -XX:-UseCompressedOops -XX:+UseSerialGC 
+0.191: [GC (Allocation Failure) 0.191: [DefNew: 6443K->679K(9216K), 0.0067661 secs] 6443K->4775K(19456K), 0.0069140 secs] [Times: user=0.00 sys=0.01, real=0.01 secs] 
+Heap
+ def new generation   total 9216K, used 7145K [0x0000000103c00000, 0x0000000104600000, 0x0000000104600000)
+  eden space 8192K,  78% used [0x0000000103c00000, 0x0000000104250748, 0x0000000104400000)
+  from space 1024K,  66% used [0x0000000104500000, 0x00000001045a9f78, 0x0000000104600000)
+  to   space 1024K,   0% used [0x0000000104400000, 0x0000000104400000, 0x0000000104500000)
+ tenured generation   total 10240K, used 4096K [0x0000000104600000, 0x0000000105000000, 0x0000000105000000)
+   the space 10240K,  40% used [0x0000000104600000, 0x0000000104a00030, 0x0000000104a00200, 0x0000000105000000)
+ Metaspace       used 3187K, capacity 4112K, committed 4352K, reserved 8192K
