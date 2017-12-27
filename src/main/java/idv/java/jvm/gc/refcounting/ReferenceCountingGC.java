@@ -3,6 +3,13 @@ package idv.java.jvm.gc.refcounting;
 /**
  * @author Carl Lu
  * VM args: -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:gclog.log
+ * Switch the collector you want:
+ * -XX:+UseSerialGC
+ * -XX:+UseParNewGC
+ * -XX:+UseConcMarkSweepGC
+ * -XX:+UseParallelGC
+ * -XX:+UseParallelOldGC
+ * -XX:+UseG1GC
  */
 public class ReferenceCountingGC {
 
