@@ -2,6 +2,7 @@ package idv.java.jvm.gc.memoryallocate.tenuringthreshold;
 
 /**
  * @author Carl Lu
+ * VM args: -Xloggc:gclog-TenuringThresholdEqualsTo15Demo.log -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:MaxTenuringThreshold=15 -XX:+PrintTenuringDistribution -XX:-UseCompressedClassPointers -XX:-UseCompressedOops -XX:+UseSerialGC
  */
 public class TenuringThresholdDemo2 {
     private static final int _1MB = 1024 * 1024;
